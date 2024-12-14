@@ -1,12 +1,41 @@
-let counter = 0;
+let counterEl = document.querySelector('[data-find="counterValue"]'); // document - это и есть DOM
+let addOnePoolButton = document.getElementById('addOnePoolButton'); // позволяет выбирать элементы на моей странице
+let addTwoPoolButton = document.getElementById('addTwoPoolButton');
+let resetButton = document.getElementById('resetButton');
 
-console.log(counter);
 
-counter = counter + 1;  // 0 + 1
-console.log(counter);
+console.log(addOnePoolButton.dataset); // dataset - свойство, которое собирает все отрибуты в один массив
 
-counter = counter + 1; // 1 + 1
-console.log(counter);
+const COUNTER_INITIAL_VALUE = 0; // все цифры лучше выносить в отдельные константы
+                                 // константы пишутся заглавными буквами через подчеркивание
 
-counter = counter + 1;
-console.log(counter);
+let counter = COUNTER_INITIAL_VALUE;
+counterEl.innerText = counter;
+
+
+addOnePoolButton.addEventListener("click", function () {
+   counter = counter + parseInt(addOnePoolButton.dataset.pools); // parseInt - встроенная функция, которая из строки получает число
+   counterEl.innerText = counter;
+});
+
+addTwoPoolButton.addEventListener("click", function () {
+    counter = counter + parseInt(addTwoPoolButton.dataset.pools); // parseInt - встроенная функция, которая из строки получает число
+    counterEl.innerText = counter;
+ });
+
+ resetButton.addEventListener("click", function () {
+    counter = COUNTER_INITIAL_VALUE; // parseInt - встроенная функция, которая из строки получает число
+    counterEl.innerText = counter;
+ });
+
+// button.addEventListener('click', function() {
+//     counter = counter + 1;
+   
+
+//     counterText.innerText = counter; // внутри countertext меняю innerText
+// }); // добавь обработку действий
+
+
+// // DOM - Document Object Model - позволяет управлять элементами на странице
+
+// console.log(document);

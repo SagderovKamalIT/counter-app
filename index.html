@@ -5,11 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>counter-app</title>
 
-    <link rel="stylesheet" href="index.css">
+    <link rel="shortcut icon" href="recources/favicon.png" type="imaga/png">
+
+    <link rel="stylesheet" href="styles/reset.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles/index.css">
+    
 </head>
 <body>
-    
-    <button  class="counter__button" >+1 Бассейн</button>
+
+    <div class="counter__app">
+        <div data-find="counterValue" class="counter__value" ></div>
+        
+        <button id="addOnePoolButton" data-pools="1" class="add__button" >+1 Бассейн</button>
+
+        <button  id="addTwoPoolButton" data-pools="2" class="add__button" >+2 Бассейн</button>
+
+        <button id="resetButton"  class="reset__button" >Сбросить</button>
+    </div>
 
    
     <script src="index.js"></script>
