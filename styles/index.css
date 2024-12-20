@@ -51,4 +51,31 @@ padding-top: 126px;
     background-color: #D45366;
 }
 
+@media (max-width: 640px) {
+    .counter__app {
+        row-gap: 20px;
+    }
+
+    .counter__value {
+        font-size: 20px;
+        line-height: 25px;
+    }
+
+    .add__button,
+    .reset__button {
+        font-size: 20px;
+        line-height: 25px;
+        border-radius: 10px;
+
+    }
+
+    .add__button {
+       padding: 15px 90px;
+    }
+
+    .reset__button {
+        padding: 15px 100px ;
+    }
+}
+
 
